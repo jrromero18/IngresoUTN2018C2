@@ -13,7 +13,7 @@ dividendo = parseInt(document.getElementById("numeroDividendo").value);
 
 divisor = parseInt(document.getElementById("numeroDivisor").value);
 
-resultado = (dividendo / divisor);
+resultado = (dividendo % divisor);
 
 alert ("El resto es: " + resultado);
 	
