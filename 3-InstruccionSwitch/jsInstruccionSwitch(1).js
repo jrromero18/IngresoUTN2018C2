@@ -9,23 +9,23 @@ mes = document.getElementById('mes').value;
 switch (mes)
 
 {
-    case ("Enero"):
+    case "Enero":
     alert("que comiences bien el año!!!");
 
     break;
 
-    case ("Marzo"):
+    case "Marzo":
     alert ("a clases");
 
     break;
 
- case ("Julio"):
+ case "Julio":
 
     alert("Se vienen las vacaciones");
 
     break;
 
-    case ("Diciembre"):
+    case "Diciembre":
     alert("Felices fiestas");
 
     break;
