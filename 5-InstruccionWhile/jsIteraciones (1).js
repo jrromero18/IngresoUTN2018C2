@@ -1,12 +1,12 @@
 function mostrar()
 {
-var i = 0 ;
+var i = 1 ;
 
 
 
-while (i<11)
+while (i<=10)
 {
-	alert("el numero es: " + i)
+	console.log(i);
 	i++
 
 }

@@ -4,8 +4,26 @@ function mostrar()
 	var contador=0;
 	var positivo=0;
 	var negativo=1;
+	var respuesta;
+	var numero;
 	
-	var respuesta='si';
+
+do
+{
+numero = parseInt(prompt("Ingrese un numero"));
+
+if(numero>0)
+{
+	positivo = positivo + numero;
+}
+else
+{
+negativo=negativo* numero;
+}
+
+respuesta = prompt("continuar si o no?");
+}
+while (respuesta=="si")
 
 
 document.getElementById('suma').value=positivo;
