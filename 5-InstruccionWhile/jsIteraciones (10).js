@@ -22,12 +22,11 @@ var pormneg;
 var dif;
 var numero;
 var continuar;
-var contador;
+
 
 do 
 {
 numero = parseInt(prompt("Ingrese un numero"));
-contador ++
 
 if (numero>0)
 {
@@ -43,26 +42,40 @@ else
 {
 	cantceros ++
 }
-if (numero /2 ==0)
+if (numero %2 ==0)
 
 {
 	cantnumPares ++
 }
 
 
-
-
 continuar = prompt ("continuar?");
 
+} while (continuar == "si");
+
+//nunc se puede dividir un numero por cero es ERROR !HAY QUE PREGUNTAR;
+if (cantpos !=0){
+	prompos = sumpos/cantpos;
 }
-while (continuar == "si");
+
+if (cantneg !=0){
+	pormneg = sumneg/cantneg;
+}
 
 
-alert(sumneg + "  " +sumpos + "  " +cantpos+ "  "+ cantneg + "  "+cantceros );
 
-document.write("suma neg " +sumneg + <br/ );
+dif= sumpos - sumneg;
 
 
+document.write("1-Suma de los negativos: " + sumneg + "<br>" );
+document.write("2-Suma de los positivos.: " + sumpos + "<br>" );
+document.write("3-Cantidad de positivos.: " + cantpos + "<br>" );
+document.write("4-Cantidad de negativos.: " + cantneg + "<br>" );
+document.write("5-Cantidad de ceros. : " + cantceros + "<br>" );
+document.write("6-Cantidad de números pares: " + cantnumPares + "<br>" );
+document.write("7-Promedio de positivos. : " + prompos + "<br>" );
+document.write("8-Promedio de negativos: " + pormneg + "<br>" );
+document.write("9-dif:  " + dif + "<br>" );
 
 
 
