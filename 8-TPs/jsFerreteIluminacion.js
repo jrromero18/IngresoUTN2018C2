@@ -10,5 +10,91 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+
+var cantidad;
+var precio = 35;
+var marca;
+var preciofin;
+var descuento;
+var preciocondescuento;
+var preciofinacoDES;
+var iibb;
+var flag=false;
+
+cantidad = parseInt(document.getElementById("Cantidad").value);
+marca = document.getElementById("Marca").value;
+
+
+switch (cantidad)
+{
+case 1:
+case 2:
+    descuento = 0.5;
+    break;
+case 3:
+    if (marca=="ArgentinaLuz")
+    {
+        descuento=0.15;
+    }
+    else if (marca =="FelipeLamparas")
+    {
+         descuento = 0.1;
+    }
+    else{
+        descuento=0.05;
+    }
+    break;
+case 4:
+    if (marca=="ArgentinaLuz" ||marca=="FelipeLamparas" )
+    {
+        descuento = 0.25;
+    }
+    else
+    {
+        descuento = 0.2
+    }
+    break;
+
+case 5:
+    if (marca=="ArgentinaLuz")
+    {
+        descuento= 0.4
+    }
+    else
+    {
+        descuento=0.3
+    }
+    break;
+
+default:
+
+descuento = 0.5
+
+        break;
 }
+
+preciocondescuento = precio*descuento;
+preciofin= precio - preciocondescuento;
+preciofinacoDES= cantidad *preciofin;
+
+
+if (preciofinacoDES>120)
+{
+iibb=preciofinacoDES*0.1
+preciofinacoDES = preciofinacoDES*1.1;
+flag=true;
+
+ 
+document.getElementById("precioDescuento").value = preciofinacoDES.toFixed(2);
+}
+if(flag){
+    alert("IIBB Uste pago " +iibb);
+}
+
+}
+
+
+
+
+//parseInt(document.getElementById("precioDescuento").value) = preciofin;
+
