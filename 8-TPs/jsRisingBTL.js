@@ -40,7 +40,7 @@ function ComenzarIngreso ()
         sexo="Masculino";
     }
 
-     estadoCivil = parseInt(prompt("Ingrese estaso civil 1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos"));
+     estadoCivil = parseInt(prompt("Ingrese estado civil 1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos"));
      
      while(!(estadoCivil>=1 && estadoCivil<=4)){
         
@@ -63,7 +63,7 @@ function ComenzarIngreso ()
         sueldoBruto=parseInt(prompt("ERROR. Sueldo bruto, no menor a 8000"));
      }
 
-     legajo = parseInt(prompt("Ingrse numero de legajo"))
+     legajo = parseInt(prompt("Ingrse numero de legajo"));
 
      while  (!(legajo >= 1000 && legajo<=9999)){
 
